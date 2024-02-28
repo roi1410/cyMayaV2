@@ -3,8 +3,8 @@ import React from 'react'
 function AppendFields({append}) {
   return (
     <button
-        onClick={() => append()}
-        className="inline-flex items-center justify-center w-10 h-10 mr-2 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800"
+        onClick={() => append(" ")}
+        className=" bg-popUp inline-flex items-center justify-center w-10 h-10 mr-2 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-secondary"
       >
         <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
           <path

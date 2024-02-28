@@ -8,7 +8,9 @@ export default {
     colors:{
       primary: "#201658",
       secondary:"#98ABEE" ,
-      popUp:"#1D24CA"
+      popUp:"#1D24CA",
+      red:"#D04848",
+      red_light:"#D71313"
     
     },
     extend: {
