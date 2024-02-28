@@ -17,9 +17,9 @@ const courseSchema = new mongoose.Schema({
   //   tests:,
 });
 
-const course = mongoose.model("course", courseSchema);
+const Course = mongoose.model("Course", courseSchema);
 
-module.exports = course;
+module.exports = Course;
 
 // course1{
 //     name:july full stack 2024

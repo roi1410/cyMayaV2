@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const eventSchema = new Schema({
+const eventSchema = new mongoose.Schema({
   gantt: { type: mongoose.Schema.Types.ObjectId, ref: "  Gantt" },
 
   howsInvited: [
@@ -11,6 +11,6 @@ const eventSchema = new Schema({
   when: Date,
 });
 
-const event = mongoose.model("event", eventSchema);
+const Event = mongoose.model("Event", eventSchema);
 
-module.exports = event;
+module.exports = Event;
