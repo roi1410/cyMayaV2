@@ -1,6 +1,6 @@
 const bodyParser = require("body-parser");
 const app = require("./app");
-const port = 8000;
+const port = 8002;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 const mongoose = require("mongoose");
@@ -22,6 +22,7 @@ mongoose.connect(process.env.MONGOURL, {
 app.listen(port, () => {
   console.log(`connected on port ${port}`);
 });
+
 
 
 

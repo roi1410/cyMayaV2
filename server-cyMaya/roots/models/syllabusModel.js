@@ -5,6 +5,6 @@ const syllabusSchema = new mongoose.Schema({
   subjects: [{ subjectName: { type: String }, hours: { type: Number } }],
 });
 
-const syllabus = mongoose.model("syllabus", syllabusSchema);
+const Syllabus = mongoose.model("Syllabus", syllabusSchema);
 
-module.exports = syllabus;
+module.exports = Syllabus;

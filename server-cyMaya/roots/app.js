@@ -3,7 +3,7 @@ const app = express();
 
 const courseRoute = require("./routes/courseRoute");
 const eventRoute = require("./routes/eventRoute");
-const ganttRoute = require("./routes/gantttRoute");
+const ganttRoute = require("./routes/ganttRoute");
 const studentRoute = require("./routes/studentRoute");
 const syllabusRoute = require("./routes/syllabusRoute");
 const unAvailableDatesRoute = require("./routes/unAvailableDatesRoute");
@@ -19,7 +19,6 @@ const corsOptions = {
   credentials: true,
 };
 app.use(cors(corsOptions));
-
 app.use("/course", courseRoute);
 app.use("/event", eventRoute);
 app.use("/gantt", ganttRoute);

@@ -19,6 +19,6 @@ const ganttSchema = new mongoose.Schema({
   ],
 });
 
-const gantt = mongoose.model("gantt", ganttSchema);
+const Gantt = mongoose.model("Gantt", ganttSchema);
 
-module.exports = gantt;
+module.exports = Gantt;
