@@ -7,6 +7,7 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { allContext } from "./MainContext";
 import StudentPage from "./components/Pages/StudentPage";
 
+
 export default function App() {
   const {register, control } = useContext(allContext);
   return (
@@ -18,7 +19,6 @@ export default function App() {
             <Route path="GanttForm" element={<GanttForm control={control} register={register} />}></Route>
             <Route path="StudentPage" element={<StudentPage control={control} register={register} />}></Route>
           </Route>
-
         </Route>
       </Routes>
     </BrowserRouter>
