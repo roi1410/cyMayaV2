@@ -4,7 +4,6 @@ const Gantt = require("../models/ganttModel");
 exports.deleteEvent = async (req, res) => {
   try {
     const deleteEvent = await Event.findByIdAndDelete(req.params.eventId);
-    console.log("🚀 ~ exports.deleteEvent ~ deleteEvent:", deleteEvent._id);
 
     const gantt = await Gantt.findById(deleteEvent.gantt._id);
     if (!gantt) {
@@ -58,6 +57,6 @@ exports.updateEvent = async (req, res) => {
 
     res.status(200).send({ status: "success", updateEvent: updateEvent });
   } catch (error) {
-    res.status(500).send({ status: "fail" });
+    res.status(500).send({ status: "fail",error:error });
   }
 };

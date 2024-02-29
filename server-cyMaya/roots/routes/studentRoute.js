@@ -3,8 +3,7 @@ const router = express.Router();
 const studentController = require("../controllers/studentController");
 
 router
-  // .post("/create", studentController)
-  // .get("/read", studentController)
-  // .patch("/update",studentController)
-  // .delete("/delete",studentController);
+  .post("/:courseId", studentController.createStudents)
+  .patch("/:studentId",studentController.updateStudent)
+  .delete("/:studentId",studentController.deleteStudent);
 module.exports = router;
