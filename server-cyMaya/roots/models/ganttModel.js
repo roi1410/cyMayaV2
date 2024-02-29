@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const ganttSchema = new mongoose.Schema({
   course: { type: mongoose.Schema.Types.ObjectId, ref: "  Course" },
+  startingDate:{type:Date},
 
   syllabus: {
     type: mongoose.Schema.Types.ObjectId,
@@ -15,8 +16,9 @@ const ganttSchema = new mongoose.Schema({
     },
   ],
   unAvailableDates: [
-    { type: mongoose.Schema.Types.ObjectId, ref: "  unAvailableDate" },
-  ],
+    { type: mongoose.Schema.Types.ObjectId, ref: "UnAvailableDates" },
+   ],
+   
 });
 
 const Gantt = mongoose.model("Gantt", ganttSchema);

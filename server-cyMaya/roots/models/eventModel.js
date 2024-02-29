@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const eventSchema = new mongoose.Schema({
   gantt: { type: mongoose.Schema.Types.ObjectId, ref: "  Gantt" },
-
+  eventName: { type: String },
   howsInvited: [
     {
       name: String,

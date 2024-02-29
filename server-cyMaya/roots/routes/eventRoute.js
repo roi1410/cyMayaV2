@@ -3,8 +3,7 @@ const router = express.Router();
 const eventController = require("../controllers/eventController");
 
 router
-  // .post("/create", eventController)
-  // .get("/read", eventController)
-  // .patch("/update",eventController)
-  // .delete("/delete",eventController);
+  .post("/:ganttId", eventController.createANewEvent)
+  .patch("/:eventId",eventController.updateEvent)
+  .delete("/:ganttId",eventController.deleteEvent);
 module.exports = router;

@@ -1,0 +1,7 @@
+.rbc-calendar {
+  height: 100vh !important;
+}
+
+.rbc-day-bg rbc-off-range-bg {
+  background-color: brown;
+}
