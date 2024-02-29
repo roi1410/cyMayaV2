@@ -11,7 +11,7 @@ function CourseForm({register}) {
       </label>
       <input
         type="text"
-        {...register("courseName")}
+        {...register("name")}
         placeholder="יש להזין את שם הקורס"
         className="border border-gray-300 shadow p-3 w-full rounded mb-"
       />
