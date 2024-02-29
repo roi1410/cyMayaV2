@@ -6,7 +6,7 @@ import AppendFields from "../UI/AppendFields";
 function UnavailableDateForm({register,control}) {
   const { fields, append, remove } = useFieldArray({
     control,
-    name: "UnavailableDate",
+    name: "unAvailableDates",
   });
   return (
     <>
