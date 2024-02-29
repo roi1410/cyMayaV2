@@ -21,23 +21,33 @@ function EventForm({ register, control }) {
       <h1>אירוע חדש</h1>
       <AppendFields append={append} />
       <RemoveFields remove={remove} fields={fields} />
-      {fields.map((ev,index) => {
+      {fields.map((ev, index) => {
         return (
-          <>
           <div key={ev.id}>
             <label className=" text-sm font-medium text-secondary ">
               תאריך האירוע
             </label>
             <input
-            type="date"
-              className="block w-20 border disabled:cursor-not-allowed disabled:opacity-50 bg-gray-50 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 rounded-lg p-2.5 text-sm"
-              {...register(`events.${index}.when`,{
-                valueAsDate:true
+              type="date"
+              className="block w-25 border disabled:cursor-not-allowed disabled:opacity-50 bg-gray-50 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 rounded-lg p-2.5 text-sm"
+              {...register(`events.${index}.when`, {
+                valueAsDate: true,
               })}
             />
-            <EventInvForm register={register} control={control} eventIndex={index}/>
-            </div>
-          </>
+            <label className=" text-sm font-medium text-secondary ">
+              שם האירוע
+            </label>
+            <input
+              type="date"
+              className="block w-25 border disabled:cursor-not-allowed disabled:opacity-50 bg-gray-50 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 rounded-lg p-2.5 text-sm"
+              {...register(`events.${index}.eventName`)}
+            />
+            <EventInvForm
+              register={register}
+              control={control}
+              eventIndex={index}
+            />
+          </div>
         );
       })}
     </>
