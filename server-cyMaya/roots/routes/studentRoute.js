@@ -3,7 +3,7 @@ const router = express.Router();
 const studentController = require("../controllers/studentController");
 
 router
-  // .post("/create", studentController)
+  .post("/:courseId", studentController.createStudents)
   // .get("/read", studentController)
   // .patch("/update",studentController)
   // .delete("/delete",studentController);
